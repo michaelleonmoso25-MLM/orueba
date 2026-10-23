@@ -1,13 +1,13 @@
 import { Module } from '@nestjs/common';
-import { AuthService } from './auth.service.js';
-import { AuthController } from './auth.controller.js';
+import { AuthService } from './auth.service';
+import { AuthController } from './auth.controller';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { User } from '../users/entities/user.entity.js';
+import { User } from '../users/entities/user.entity';
 import { JwtModule } from '@nestjs/jwt';
-import { jwtConstants } from './jwt/jwt.constants.js';
-import { JwtStrategy } from './jwt/jwt.strategy.js';
-import { RolesService } from '../roles/roles.service.js';
-import { Rol } from '../roles/entities/rol.entity.js';
+import { jwtConstants } from './jwt/jwt.constants';
+import { JwtStrategy } from './jwt/jwt.strategy';
+import { RolesService } from '../roles/roles.service';
+import { Rol } from '../roles/entities/rol.entity';
 
 @Module({
   imports: [ 

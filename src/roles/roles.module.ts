@@ -1,10 +1,10 @@
 import { Module } from '@nestjs/common';
-import { RolesService } from './roles.service.js';
-import { RolesController } from './roles.controller.js';
+import { RolesService } from './roles.service';
+import { RolesController } from './roles.controller';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { Rol } from './entities/rol.entity.js';
-import { User } from '../users/entities/user.entity.js';
-import { JwtStrategy } from '../auth/jwt/jwt.strategy.js';
+import { Rol } from './entities/rol.entity';
+import { User } from '../users/entities/user.entity';
+import { JwtStrategy } from '../auth/jwt/jwt.strategy';
 
 
 @Module({

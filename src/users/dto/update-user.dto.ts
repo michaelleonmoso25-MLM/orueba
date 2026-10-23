@@ -1,18 +1,22 @@
-import { IsNotEmpty, IsString } from "class-validator";
+import { IsNotEmpty, IsOptional, IsString } from "class-validator";
 
+// Todos los campos son opcionales: si se envían, no pueden ir vacíos
 export class UpdateUserDto {
+    @IsOptional()
     @IsNotEmpty()
     @IsString()
-    name?: String;
+    name?: string;
 
+    @IsOptional()
     @IsNotEmpty()
     @IsString()
-    lastname?: String;
+    lastname?: string;
 
+    @IsOptional()
     @IsNotEmpty()
     @IsString()
-    phone?: String;
+    phone?: string;
 
-    image?: String;
-    notification_token?: String;
+    image?: string;
+    notification_token?: string;
 }

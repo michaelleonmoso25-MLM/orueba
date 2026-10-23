@@ -1,12 +1,12 @@
 import { Body, Controller, Post, Get, UseGuards, Put, Param, ParseIntPipe, UseInterceptors, UploadedFile, ParseFilePipe, MaxFileSizeValidator, FileTypeValidator } from '@nestjs/common';
-import { JwtAuthGuard } from '../auth/jwt/jwt-auth.guard.js';
-import { CreateUserDto } from './dto/create-user.dto.js';
-import { UsersService } from './users.service.js';
-import { UpdateUserDto } from './dto/update-user.dto.js';
+import { JwtAuthGuard } from '../auth/jwt/jwt-auth.guard';
+import { CreateUserDto } from './dto/create-user.dto';
+import { UsersService } from './users.service';
+import { UpdateUserDto } from './dto/update-user.dto';
 import { FileInterceptor } from '@nestjs/platform-express';
-import { JwtRolesGuard } from '../auth/jwt/jwt-roles.guard.js';
-import { HasRoles } from '../auth/jwt/has-roles.js';
-import { JwtRole } from '../auth/jwt/jwt-role.js';
+import { JwtRolesGuard } from '../auth/jwt/jwt-roles.guard';
+import { HasRoles } from '../auth/jwt/has-roles';
+import { JwtRole } from '../auth/jwt/jwt-role';
 @Controller('users')
 export class UsersController {
 

@@ -1,7 +1,6 @@
-import { Entity, PrimaryGeneratedColumn, Column, BeforeInsert, ManyToMany, JoinTable, OneToMany } from 'typeorm';
+import { Entity, PrimaryGeneratedColumn, Column, BeforeInsert, ManyToMany, JoinTable } from 'typeorm';
 import { hash } from 'bcrypt';
-import { Rol } from '../../roles/entities/rol.entity.js';
-import { Exclude } from 'class-transformer';
+import { Rol } from '../../roles/entities/rol.entity';
 
 @Entity({ name: 'users' })
 export class User {
